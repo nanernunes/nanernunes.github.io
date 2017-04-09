@@ -9,8 +9,6 @@ share: true
 categories:
   - unix-linux
   - development
-dsq_thread_id:
-  - 1308936258
 ---
 
 **NOTA**: Esse post foi escrito há {{ site.time | date: '%Y' | minus: 2010 }} anos. Elegi como o único antigo que deveria ser reciclado pra estar aqui por dois motivos: o primeiro é pela aceitação do artigo, visto pelos comentários e principalmente da notoriedade que teve no fórum zendbrasil.com.br, o segundo é pra servir como lembrete de como nossas opiniões mudam com o tempo. Nos dias de hoje faria tudo diferente, leiam os novos pois já estou...<!--more-->
