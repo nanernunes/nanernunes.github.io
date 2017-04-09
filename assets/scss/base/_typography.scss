@@ -95,12 +95,12 @@ code {
   font-family: Monaco,"Courier New","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace;
   font-size: 12px;
   font-size: 0.86rem;
-  line-height: 1.5;
+  /*line-height: 1.5;*/
   margin: 0;
-  padding: 3px 6px;
+  padding: 4px 6px;
   background: none;
-  background-color: #efefef;
-  border-radius: 7px;
+  background-color: #f4f4f4;
+  border-radius: 5px;
   -webkit-border-radius: 7px;
   -moz-border-radius: 7px;
 }
