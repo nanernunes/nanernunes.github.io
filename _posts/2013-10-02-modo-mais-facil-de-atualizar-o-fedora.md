@@ -8,8 +8,6 @@ comments: true
 share: true
 categories:
   - unix-like
-dsq_thread_id:
-  - 1817588847
 ---
 
 Aproveitando que o grupo *RedHat* liberou a versão 20 do *Fedora* para teste, da versão 15 pra cá tenho atualizado sempre da mesma maneira e sem problemas.

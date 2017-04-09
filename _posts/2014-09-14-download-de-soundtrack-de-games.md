@@ -9,8 +9,6 @@ share: true
 categories:
   - development
   - games
-dsq_thread_id:
-  - 3016093609
 ---
 
 Algumas trilhas já caíram até em domínio público e mesmo assim é difícil encontrá-las, nem em *torrent*. Diga-se de passagem que alguns *games* foram produzidos 20 atrás.<!--more--> Um dos melhores repositórios que encontrei é o [*Kingdom Hearts Insider*][khinsider]

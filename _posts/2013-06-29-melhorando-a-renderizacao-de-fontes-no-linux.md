@@ -8,8 +8,6 @@ comments: true
 share: true
 categories:
   - unix-like
-dsq_thread_id:
-  - 1449609207
 ---
 
 É fato que um dos grandes impactos gráficos na migração de `Ubuntu` para `Fedora` foi na renderização das fontes. Admiro o cuidado que a `Canonical` possui no *design* da distribuição, ao meu ver era aceitável nas cores, nas fontes e no *anti-aliasing*. Sem sombra de dúvidas a configuração padrão das outras distribuições deixa muito aquém.<!--more--> Cheguei a ponto de executar simultaneamente 4 (quatro) máquinas virtuais a título de comparação e instalar apenas o Linux em outros discos para usar a placa de vídeo nativamente na intenção de conseguir resultados satisfatórios.
