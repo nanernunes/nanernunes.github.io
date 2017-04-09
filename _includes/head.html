@@ -19,7 +19,7 @@
       {{ page_title | strip | rstrip | lstrip | escape | strip_newlines }}
   {% endcapture %}
 
-  <title>{{ page_title }}</title>
+  <title>{{ site.author.name }}</title>
 
   {% assign page_description = '' %}
   {% capture page_description %}
