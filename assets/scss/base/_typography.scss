@@ -1,0 +1,117 @@
+@import url("//fonts.googleapis.com/css?family=Open+Sans:400,300,700");
+@import url("//fonts.googleapis.com/css?family=Monaco:300");
+@import url("//fonts.googleapis.com/css?family=Domine:700");
+@import url("//fonts.googleapis.com/css?family=Open+Sans:400,600");
+@import url("//fonts.googleapis.com/css?family=Source+Code+Pro:500");
+
+// @import url("//fonts.googleapis.com/css?family=Merriweather:400,300,700");
+
+body {
+  color: $base-font-color;
+  font-family: $base-font-family;
+  font-feature-settings: "kern", "liga", "pnum";
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $heading-font-family;
+  font-size: $base-font-size;
+  line-height: $heading-line-height;
+  /*margin: 0 0 $small-spacing;*/
+  margin: 1.8em 0 .75em;
+  font-weight: 300;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+h2 {
+  font-size: 26px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+h4 {
+  font-size: 20px;
+}
+
+h5,
+h6 {
+  font-size: 16px;
+}
+
+p {
+  margin: 0 0 $small-spacing;
+
+  &.lead {
+    font-size: 22px;
+    font-weight: 300;
+  }
+}
+
+a {
+  color: $action-color;
+  text-decoration: none;
+
+  &:active,
+  &:focus,
+  &:hover {
+    color: shade($action-color, 25%);
+  }
+}
+
+hr {
+  border-bottom: $base-border;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  margin: $base-spacing 0;
+}
+
+img,
+picture {
+  margin: 0;
+  max-width: 100%;
+}
+
+blockquote {
+  padding: 0 0 0 $base-spacing;
+  margin: $base-spacing 0 3em;
+  color: $medium-gray-color;
+  line-height: 1.8;
+  border-left: $small-spacing solid $light-gray-color;
+}
+
+code {
+  font-family: Monaco,"Courier New","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace;
+  font-size: 12px;
+  font-size: 0.86rem;
+  line-height: 1.5;
+  margin: 0;
+  padding: 3px 6px;
+  background: none;
+  background-color: #efefef;
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+}
+
+pre {
+  -webkit-overflow-scrolling: touch;
+  font-family: "Courier New", monospace;
+  font-size: 0.9em;
+  margin: 0;
+
+  code {
+    line-height: 1.75em;
+  }
+}

@@ -1,0 +1,38 @@
+---
+layout: default
+title: Home
+---
+
+{% include intro.html %}
+
+<section class="post-list">
+  <div class="container">
+
+    {% for post in site.posts %}
+
+    {% unless post.next %}
+      <div class="year"><h2>{{ post.date | date: '%Y' }}</h2></div>
+      <div class="entire">
+      {% else %}
+        {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
+        {% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
+        {% if year != nyear %}
+          </div>
+          <br />
+          <div class="year"><h2>{{ post.date | date: '%Y' }}</h2></div>
+          <div class="entire">
+      {% endif %}
+    {% endunless %}
+
+      <article>
+        <p>
+          <span class="post-meta"><code>{{ post.date | date: "%b %d" }}</code></span>  — 
+          <strong><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></strong>
+        </p>
+      </article>
+    {% endfor %}
+  </div>
+
+</section>
+
+<strong class="author-name" itemprop="name"></strong>

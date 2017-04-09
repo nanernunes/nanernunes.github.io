@@ -1,0 +1,33 @@
+# SEO settings
+url:               http://www.naner.com.br
+title:             DEV. NOTES BY
+
+# Author settings
+author:
+  name:            Naner Nunes
+  email:           naner@naner.com.br
+  url:             http://naner.com.br
+
+google_analytics:  UA-69166232-1
+disqus_shortname:  naner
+comments:          true
+
+# navbar pages
+navbar:
+  - slug :         about
+    title:         About
+
+
+# Build settings
+markdown:          kramdown
+highlighter:       rouge
+
+# Sass configuration
+sass:
+  sass_dir:        assets/scss
+  style:           compressed
+
+# social settings
+og_locale:         pt_BR
+twitter_card:      summary_large_image
+twitter_site:      '@nanernunes'
