@@ -205,9 +205,9 @@ A maior diferença de um equipamento **Mac** / **PowerPC** para nosso **PC** fic
 
 Esse é o que podemos chamar de método "mais puro", você modifica o *firmware* do BIOS da placa-mãe para que ela se comporte como se fosse um Mac (não impede de rodar **Windows** & **Linux** com **MultiBoot**). Entretanto, é o método mais arriscado de *brickar* uma placa. Para começar, como geralmente estamos na última versão de firmware, precisamos fazer um *downgrade* na placa, fazer o [patch no firmware][pmpatch] mais novo e reaplicá-lo.
 
-{% highlight bash %}
+``` bash
 pmpatch /path/to/original.bios /path/to/patched.bios
-{% endhighlight %}
+```
 
 O OSX funciona como nativo e não é necessário ter *drivers* para emular o Gerenciamento de Energia, mas vale lembrar que a cada atualização de BIOS precisamos repetir o processo e em uma dessas eventualidades a placa pode não aceitar muito bem o firmware modificado.
 
@@ -258,7 +258,7 @@ Para configurar facilmente novos `SMBios.plist` e `DSDT.aml` no processo de boot
 
 Por fim, o arquivo mais importante que possui a receita das configurações de inicialização para quem escolheu o *Chameleon* como gestor de boot. O melhor aplicativo para modificar os parâmetros do conteúdo deste plist também é o [Chameleon Wizard][wizard]. A configuração abaixo é a versão final (*stable*).
 
-{% highlight xml %}
+``` xml
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -285,14 +285,14 @@ Por fim, o arquivo mais importante que possui a receita das configurações de i
 	<string>Yes</string>
 </dict>
 </plist>
-{% endhighlight %}
+```
 
 Para funcionar com o **Yosemite** é necessário ativar também `kext-dev-mode=1` nas flags.
 
-{% highlight xml %}
+``` xml
 <key>Kernel Flags</key>
 <string>-f npci=0x2000 darkwake=0 kext-dev-mode=1</string>
-{% endhighlight %}
+```
 
 
 ## Atualização do Hackintosh

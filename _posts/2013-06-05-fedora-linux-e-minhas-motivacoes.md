@@ -8,11 +8,9 @@ comments: true
 share: true
 categories:
   - unix-like
-dsq_thread_id:
-  - 1362989426
 ---
 
-Como muitos perceberão: uma das mudanças na nova era de postagens do Blog, é que como supracitado, mudei a distribuição de Linux com a qual trabalhava os exemplos - De `Ubuntu` para `Fedora`. Trabalhando diariamente com Linux em grandes corporações, é indiscutível a notoriedade do `RedHat® Linux` no meio corporativo. Ainda acredito que o Ubuntu é ótimo, principalmente para notebooks e afins, tive o prazer de receber a primeira mídia da primeira release, mas motivos fortes levaram-me a migrar para o Fedora.<!--more-->
+Como muitos perceberão: uma das mudanças na nova era de postagens do Blog, é que como supracitado, mudei a distribuição de Linux com a qual trabalhava os exemplos - De `Ubuntu` para `Fedora`. Trabalhando diariamente com Linux em grandes corporações, é indiscutível a notoriedade do `RedHat® Linux` no meio corporativo. Ainda acredito que o Ubuntu é ótimo, principalmente para notebooks e afins, tive o prazer de receber a primeira mídia da primeira release, mas motivos fortes levaram-me a migrar para o Fedora.
 
 O RedHat é conhecido por sua estabilidade o que não vai de encontro com atualizações tão frequentes, porém o número de erratas e correções de *bugfix's* é algo de suma importância. Por este motivo, fornecedores confiam seus produtos em uma plataforma madura e totalmente suportada.
 

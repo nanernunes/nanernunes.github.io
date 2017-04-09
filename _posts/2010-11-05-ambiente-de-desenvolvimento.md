@@ -46,17 +46,17 @@ Por questão de compatibilidade escolhi trabalhar com a versão 3.1.8 do Virtual
 ## Instalações
 
 Primeiramente instalaremos nosso Servidor Apache, PHP e MySQL. Faremos o seguinte download:
-{% highlight bash %}
+``` bash
 sudo apt-get install tasksel
-{% endhighlight %}
+```
 
 ## LAMP - Linux ( Apache + MySQL + PHP )
 
 Já houve tempo em que configurar manualmente todos os parâmetros do Apache + PHP era tarefa árdua. A primeira aplicação da qual fizemos <em>download </em>( o "*tasksel*" ) é nativa da versão <strong>Ubuntu Server</strong> e auxilia na instalação automatizada para configuração de Servidores. Executá-la-emos com privilégios administrativos (root) através do comando:
 
-{% highlight bash %}
+``` bash
 sudo tasksel
-{% endhighlight %}
+```
 
 E será necessário apenas marcar a opção `LAMP server` e depois em `OK`.<br />
 
@@ -70,21 +70,21 @@ Ao término das configurações seu Ambiente Virtual já constará com os Servi�
 
 Certifique-se de que o Apache foi instalado corretamente, basta acessar `http://localhost` através de seu navegador e teremos um "<strong>It's works!</strong>".<br /><br /> Interessante no Linux é que durante a instalação do Zend, o pacote com os binários (bin) também é instalado como adicional e já realiza a inclusão do aplicativo nas Variáveis de Ambiente do Sistema Operacional. Por isso não será necessário nada mais do que executar no terminal o comando `zf`. Para fazer a instalação dos 3 (três) pacotes do Zend basta executar o comando:
 
-{% highlight bash %}
+``` bash
 sudo apt-get install zend-framework
-{% endhighlight %}
+```
 
 **OBS.:** Sigam a ordem de instalação das aplicações como descrita no tutorial, pois o Zend só conseguirá realizar as modificações no Apache caso este esteja instalado. Mas como nem tudo são flores, ainda teremos que realizar alguns ajustes.
 
 O Zend e a maioria dos sistemas baseados na metodologia MVC trabalham com uma técnica chamada de "URL Limpa" ou "Reescrita de URL". O endereço que costumamos acessar como `usuarios.php?login=naner&#038;ver=posts` ficaria como `usuarios/login/naner/ver/posts`. Mas deixemos esses detalhes para quando formos nos aprofundar no Curso Zend. Para ativá-lo então, no terminal utilize o comando:
 
-{% highlight bash %}
+``` bash
 sudo a2enmod rewrite
-{% endhighlight %}
+```
 
 A segunda diretiva a ser alterada é no arquivo: `/etc/apache2/sites-available/default` , de `None` para `All`, somente onde o cabeçalho constar como: `<Directory /var/www/>`
 
-{% highlight apache %}
+``` apache
 <VirtualHost>
     ServerAdmin webmaster@localhost
 
@@ -103,21 +103,21 @@ A segunda diretiva a ser alterada é no arquivo: `/etc/apache2/sites-available/d
     # continua com mais conteúdo...
 
 </VirtualHost>
-{% endhighlight %}
+```
 
 Feitas estas duas alterações então teremos nosso LAMP + ZEND funcionando corretamente, basta reiniciar o Serviço do Apache e começar a desenvolver aplicações.
 
-{% highlight bash %}
+``` bash
 sudo /etc/init.d/apache2 restart
-{% endhighlight %}
+```
 
 ## Kate + Konsole
 
 Boas IDE's de desenvolvimento hoje em dia auxiliam bastante na geração de código com agilidade. Neste Ambiente Virtual escolhi o Kate por ser um bom editor de texto que apresenta os 3 (três) principais recursos que mais precisaremos: árvore de navegação em diretório `folder tree`, identificação de várias linguagens `syntax highlighting` por tags mesmo que dentro de um único arquivo e console anexo para execução de comandos `konsole`.<br /> <br />O Kate não é padrão do Gnome, faz parte da suíte KDE. Por não ser padrão, quando realizarmos seu download, verificaremos que o terminal anexo não funciona, exibe apenas uma tela cinza. É necessário baixar o Plugin `Konsole`. Execute o comando abaixo e tudo mais estará resolvido.
 
-{% highlight bash %}
+``` bash
 sudo apt-get install kate konsole
-{% endhighlight %}
+```
 
 Neste ponto do tutorial nosso Ambiente Virtual está completo, pronto para qualquer desenvolvimento com Zend. Como acabamos de instalar o Kate, seguem alguns detalhes que podem ser modificados para melhorar nossa interação com a ferramenta.
 

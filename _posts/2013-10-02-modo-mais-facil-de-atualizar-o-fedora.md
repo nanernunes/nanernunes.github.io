@@ -16,8 +16,8 @@ Aproveitando que o grupo *RedHat* liberou a versão 20 do *Fedora* para teste, d
 
 O `fedup` atualiza a referência dos repositórios em `/etc/yum.repos.d`, realiza o download de todas as atualizações e cria uma nova entrada no `GRUB` com o processo de atualização, ao término do processo é criada a entrada definitiva para a nova versão, um novo `initramfs` para o novo *Kernel* e tudo está pronto. Simples assim:
 
-{% highlight bash %}
+``` bash
 fedup --network 20
-{% endhighlight %}
+```
 
 

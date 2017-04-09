@@ -45,7 +45,7 @@ Além do mais, o *Jekyll* possui estrutura simples de compreender. A pretensão 
 
 Estas instruções presumem que você já tenha o `Ruby` instalado em seu ambiente para poder executar o comando `gem`, o que é muito comum atualmente em qualquer distribuição `Linux` e principalmente no `Mac OS X`, onde em ambos no mínimo a versão `1.9.3` é padrão.
 
-{% highlight text %}
+```
 .
 ├── _config.yml
 ├── _includes
@@ -63,7 +63,7 @@ Estas instruções presumem que você já tenha o `Ruby` instalado em seu ambien
 │   └── main.css
 ├── feed.xml
 └── index.html
-{% endhighlight %}
+```
 
 
 ### Como desenvolver localmente
@@ -75,13 +75,13 @@ Sempre que for executado um `serve` ou `build` o Jekyll gera um diretório `_sit
 
 No início queria manter o *Blog* totalmente desacoplado do *GitHub*, o que vi mais tarde não ser vantagem. Para ao menos facilitar o processo de *upload* dos arquivos do projeto, existe uma *gem* chamada `glynn` que pode ser instalada com:
 
-{% highlight bash %}
+``` bash
 gem install glynn --source http://gemcutter.org
-{% endhighlight %}
+```
 
 No arquivo `_config.yml` devem ser adicionados os seguintes parâmetros:
 
-{% highlight yaml %}
+``` yaml
 ftp_host:    'your_domain.com'
 ftp_dir:     '/web/site/root'
 ftp_passive: false
@@ -90,13 +90,13 @@ ftp_passive: false
 ftp_port: 21                  # default 21
 ftp_username: 'your_user'     # default read from stdin
 ftp_password: 'your_ftp_pass' # default read from stdin
-{% endhighlight %}
+```
 
 E depois de tudo configurado basta executar o comando no diretório do projeto.
 
-{% highlight bash %}
+``` bash
 glynn
-{% endhighlight %}
+```
 
 Não tive a oportunidade de realizar muitos testes, o *Glynn* funcionou perfeitamente segundo o que se [propôs][glynn]. Senti falta de opções como visualizar um `verbose` de quais dados estavam em processo de envio e também não me agradou pois, por se tratar de uma *gem* escrita em *Ruby*, deveria ter pelo menos uma diferenciação de arquivos modificados (que fosse por *timestamp*) para não enviar sempre todo o conteúdo.
 
@@ -105,7 +105,7 @@ Não tive a oportunidade de realizar muitos testes, o *Glynn* funcionou perfeita
 
 A vantagem de hospedar o *Jekyll* no *GitHub*, além do fato de ser **gratuito**, é a integração com o *Jekyll*. Os servidores já detectam seus *commits* e executam `jekyll build` de forma transparente. Sem contar o fato do seu projeto ser um repositório `git`, então são enviados apenas os parciais - isso torna a experiência completamente diferente. Onde quer que esteja...
 
-{% highlight bash %}
+``` bash
 # basta clonar seu repositório, realizar as modificações
 git clone https://github.com/username/username.github.io.git
 
@@ -114,7 +114,7 @@ git commit -m "Novo post"
 
 # e enviar de volta.
 git push
-{% endhighlight %}
+```
 
 #### Sincronia em Ambiente assíncrono
 
@@ -125,15 +125,15 @@ Para desenvolver localmente é necessário executar uma sessão do servidor *Jek
 
 Muitos dos temas para o *Jekyll* utilizam o *framework* `less` para compilar e minificar *CSS*. Sempre que for necessário realizar alguma alteração, todos os arquivos `*.less` precisam ser recompilados. O *less* é instalado através do gerenciador de pacotes do *NodeJS*:
 
-{% highlight bash %}
+``` bash
 npm install -g less
-{% endhighlight %}
+```
 
 Uma vez que o *less* estiver instalado, compile com:
-{% highlight bash %}
+``` bash
 # Não confundir o comando lessc com less do Bash.
 lessc -x assets/less/main.less > assets/css/main.min.css
-{% endhighlight %}
+```
 
 
 ### Como sair bem do WordPress

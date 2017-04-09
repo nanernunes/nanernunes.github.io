@@ -23,13 +23,13 @@ Algumas trilhas já caíram até em domínio público e mesmo assim é difícil 
 
 Apesar das atenções ao produto específico da [**SQUARE ENIX**][squareenix], eles têm o direito de se gabar com os indicadores abaixo considerando que são trilhas apenas de jogos.
 
-{% highlight text %}
+```
 Total albums:   7106
 Total songs:  193532
 Total size:   598.64 GB
 
 # 14 de Setembro / 2014
-{% endhighlight %}
+```
 
 O portal está bem paginado para evitar carregamentos desnecessários dado o dicionário de `[0-9]` e `[A-Z]` e as *playlists* por jogo bem estruturadas. O pesadelo é que o *link* de *download* leva para outra página e nesta outra existe mais um *link* que deve ser utilizado com um `Save As`. 
 
@@ -60,7 +60,7 @@ Se eles não podem resolver por mim, farei-o eu mesmo.
 
 ## Resolvendo com Shell
 
-{% highlight bash %}
+``` bash
 #!/bin/bash
 
 REGEX='http:[^"]+\.mp3'
@@ -74,19 +74,19 @@ do
   echo "Downloading ${title}"
   curl -O --progress-bar $mp3 && echo
 done
-{% endhighlight %}
+```
 
 
 Basta salvar o conteúdo do *script* em um arquivo e aplicar permissão de execução no mesmo.
-{% highlight text %}
-$ chmod a+x khinsider
-{% endhighlight %}
+```
+chmod a+x khinsider
+```
 
 
 A primeira versão com `Shell Script` foi apenas um rascunho para executar rapidamente a lógica dos *downloads*. Já na segunda versão com `Ruby` implementei um pouco mais do que poderia chamar de *verbosidade* e detalhes como já criar o diretório com o nome do álbum capitalizado em cada palavra. **A segunda versão poderia ser feita em menos linhas à primeira, porém para efeitos didáticos deixei bem fragmentado.**
 
-{% highlight text %}
-$ ./khinsider http://downloads.khinsider.com/game-soundtracks/album/killer-instinct-killer-cuts
+```
+./khinsider http://downloads.khinsider.com/game-soundtracks/album/killer-instinct-killer-cuts
 
 # Creating the Album Folder...
 # Getting the Game Playlist...
@@ -100,11 +100,11 @@ Downloading: 02-the-way-u-move.mp3
 ######################                                                    31.8%
 
 ...
-{% endhighlight %}
+```
 
 E *voilà*, com pouco ou quase nenhum esforço você tem o álbum completo.
 
-{% highlight text %}
+```
 Killer Instinct Killer Cuts
 ├── 01-k.-i.-feeling.mp3
 ├── 02-the-way-u-move.mp3
@@ -122,7 +122,7 @@ Killer Instinct Killer Cuts
 ├── 14-rumble.mp3
 ├── 15-the-extreme.mp3
 └── 16-bonus-humiliation-.mp3
-{% endhighlight %}
+```
 
 
 [khinsider]: http://www.khinsider.com
