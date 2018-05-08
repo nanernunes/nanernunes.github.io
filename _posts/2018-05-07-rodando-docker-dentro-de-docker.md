@@ -1,6 +1,6 @@
 ---
 title: "Rodando docker dentro de docker"
-description: ""
+description: "Rodando docker dentro de docker"
 author: "Naner Nunes"
 layout: post
 permalink: rodando-docker-dentro-de-docker
@@ -33,6 +33,8 @@ Agora seu container possui o mesmo acesso que seu host, porém ainda falta o com
 
 - Ou instalando o binário docker da distribuição (mais recomendado para evitar resolver dependências)\\
   `apk add docker`, `yum install docker`, etc.
+
+<br />
 
 Lembre-se que agora o seu container tem o mesmo poder de execução do docker no *host*, logo todos os comandos serão executados como se você realmente não estivesse dentro do container. Ex.: `docker ps`
 
